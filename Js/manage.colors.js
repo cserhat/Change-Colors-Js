@@ -5,13 +5,16 @@ window.onload = () => {
     setInterval(()=>{
         let color = arrierplan.value;
         document.body.style.backgroundColor = color;
-    }, 200);
+        window.localStorage.setItem('color_arrierplan', color);
+        window.localStorage.getItem('color_arrierplan');
+        }, 200);
 
     let encarts = document.getElementById('encarts');
     setInterval(()=>{
         let color = encarts.value;
         document.getElementById('jumbo').style.setProperty('background-color', color, 'important');
         document.getElementById('page-footer').style.setProperty('background-color', color, 'important');
+        window.localStorage.setItem('color_encarts', color);
     }, 200);
 
 
@@ -30,6 +33,7 @@ window.onload = () => {
             titrecolorh3[i].style.color = color;
             titrecolorh4[i].style.color = color;
             titrecolorh5[i].style.color = color;
+            window.localStorage.setItem('color_titre', color);
         }
     }, 200);
 
@@ -40,9 +44,9 @@ window.onload = () => {
     for (var i=0, max=textcolor.length; i < max; i++) {
     let color = text.value;
     textcolor[i].style.color = color;
+    window.localStorage.setItem('color_text', color);
     }
 }, 200);
-
 }
 
 function aller_au_top() {
@@ -53,3 +57,5 @@ function aller_au_top() {
 function remetre_a_zero() {
     document.getElementById("remetre_a_zero").reset();
   }
+
+
