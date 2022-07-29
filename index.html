@@ -42,6 +42,7 @@
             Changer les couleurs de la page
           </div>
           <br>
+          <form id="remetre_a_zero">
           <label for="exampleColorInput" class="form-label">Couleur de fond de page:</label>
           <input type="color" class="form-control form-control-color" id="arrierplan" value="#FFFFFF" title="Choose your color">
           <br>
@@ -54,7 +55,8 @@
           <label for="exampleColorInput" class="form-label">Couleur des textes de la page:</label>
           <input type="color" class="form-control form-control-color" id="text" value="#000" title="Choose your color">
           <br>
-          <button type="button" class="btn btn-secondary">Couleur par défault</button>
+          <button type="button" onclick="remetre_a_zero()" class="btn btn-secondary">Couleur par défault</button>
+        </form>
         </div>
       </div>
     <div class="row">
@@ -184,7 +186,7 @@
             <div class="text-center" id="copyleft">Régis TEDONE &copy;&nbsp;2022</div>
         </div>
         <div class="col text-end">
-            <svg class="inline-flex" focusable="false" id="to-top"
+            <svg onclick="aller_au_top()" class="inline-flex" focusable="false" id="to-top"
                  role="img" stroke-linecap="round"
                  stroke-linejoin="round" stroke-width="2"
                  viewBox="0 0 512 512">

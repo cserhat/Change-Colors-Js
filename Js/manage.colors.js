@@ -43,5 +43,13 @@ window.onload = () => {
     }
 }, 200);
 
-
 }
+
+function aller_au_top() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+function remetre_a_zero() {
+    document.getElementById("remetre_a_zero").reset();
+  }
