@@ -43,10 +43,13 @@ window.onload = () => {
     setInterval(()=>{
     for (var i=0, max=textcolor.length; i < max; i++) {
     let color = text.value;
-    textcolor[i].style.color = color;
     window.localStorage.setItem('color_text', color);
-    }
+    textcolor[i].style.color = localStorage.getItem("color_text");
+    
+
+}
 }, 200);
+
 }
 
 function aller_au_top() {
